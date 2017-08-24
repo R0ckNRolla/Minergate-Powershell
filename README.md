@@ -20,23 +20,29 @@ Download Install_Minergate.ps1 and place it in your C:\ Directory. Register an a
 
 Click on Start and type Powershell -> Right click on "Windows Powershell" and then "Run as Administrator"
 
-#### 3. Set Execution Policy and Execute the Script
+#### 3. Set Execution Policy
 
 By default Windows does not allow the execution of Powershell scripts. This is by design to stop remote/local execution out of the box for hackers to take advantage of. You must launch Powershell in Administrator mode and type the following: (Without "")
 
-"cd \" Press Enter
-"_Set-ExecutionPolicy Unrestricted_" Press Enter
+**"cd \"** Press Enter
+
+**"_Set-ExecutionPolicy Unrestricted_"** Press Enter
 
 Powershell will then ask:
 
-#####Execution Policy Change
+**Execution Policy Change**
+
 The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
 you to the security risks described in the about_Execution_Policies help topic at
 http://go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
 [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): 
 
-You need to choose: "[A] Yes to All" Press A
+You need to choose: "[A] Yes to All" **Press A**
 
 ![Alt text](https://github.com/MetalH47K/Minergate-Powershell/blob/master/Set-ExecutionPolicy%20Unrestricted.PNG?raw=true "Set-ExecutionPolicy Unrestricted")
 
-Now you are ready to execute the script. Simply type without brackets ".\Install_Minergate.ps1"
+#### 4. Execute Script
+
+Now you are ready to execute the script. Simply type without brackets **".\Install_Minergate.ps1"**
+
+
