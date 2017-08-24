@@ -24,7 +24,9 @@ Click on Start and type Powershell -> Right click on "Windows Powershell" and th
 
 By default Windows does not allow the execution of Powershell scripts. This is by design to stop remote/local execution out of the box for hackers to take advantage of. You must launch Powershell in Administrator mode and type the following: (Without "")
 
-**"cd \"** Press Enter
+**"cd \"** cd \ Press Enter
+
+![Alt text](https://github.com/MetalH47K/Minergate-Powershell/blob/master/cd.PNG?raw=true "cd \")
 
 **"_Set-ExecutionPolicy Unrestricted_"** Press Enter
 
