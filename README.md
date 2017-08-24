@@ -22,7 +22,9 @@ Click on Start and type Powershell -> Right click on "Windows Powershell" and th
 
 #### 3. Set Execution Policy
 
-By default Windows does not allow the execution of Powershell scripts. This is by design to stop remote/local execution out of the box for hackers to take advantage of. You must launch Powershell in Administrator mode and type the following: (Without "")
+By default Windows does not allow the execution of Powershell scripts. This is by design to stop remote/local execution out of the box for hackers to take advantage of. Please be aware that when you set this you are allow unrestricted script execution access to your PC and as such any application can remotely execute scripts. You can isolate it to just one session that has unrestricted access. You will need to find out how to complete that if it concerns you.
+
+You must launch Powershell in Administrator mode and type the following: (Without "")
 
 **"cd \"** cd \ Press Enter
 
