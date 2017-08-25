@@ -14,6 +14,9 @@ $KillAction = New-ScheduledTaskAction -Execute 'C:\Mining\MinerGate-cli-4.04-win
 $KillTrigger =  New-ScheduledTaskTrigger -Daily -At 7am
 $CPUQuery = ((get-counter "\Processor(*)\% idle time").countersamples | select instancename).length -1
 $CPU = $CPUQuery / 2 # Get CPUs and divides it by 2 to allow computer to play normal
+$CPUFull = $CPUQuery / 1
+$principal = New-ScheduledTaskPrincipal -UserID "NT AUTHORITY\SYSTEM" -LogonType ServiceAccount -RunLevel Highest
+$settings = New-ScheduledTaskSettingsSet -MultipleInstances Parallel
 
 # Check machine if 64-bit. If it isn't cancel the script: (I will include a 32-Bit ELSE command so it can run on either)
 
@@ -61,8 +64,8 @@ Remove-Item $output
 
 # Create Scheduled Start/Kill Task
 
-Register-ScheduledTask -Action $StartAction -Trigger $StartTrigger -TaskName "Start_Minergate" -Description "Start Minergate"
-Register-ScheduledTask -Action $KillAction -Trigger $KillTrigger -TaskName "Kill_Minergate" -Description "Kill Minergate"
+Register-ScheduledTask -Action $StartAction -Trigger $StartTrigger -TaskName "Start_Minergate" -Description "Start Minergate" -Settings $settings -Principal $principal
+Register-ScheduledTask -Action $KillAction -Trigger $KillTrigger -TaskName "Kill_Minergate" -Description "Kill Minergate" -Settings $settings -Principal $principal
 
 # Copy vbs to Startup Folder
 
