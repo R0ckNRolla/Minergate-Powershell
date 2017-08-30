@@ -16,7 +16,7 @@ With some work you can executes the code in this git via one line of code only. 
 
 Run CMD as Administrator and paste this script in:
 
-@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/Hawkryption/dd55e0a282a70f3af63ed792f5eca570/raw/aec24c2aca6d41f521d0dc90cd6749a4c553e613/Java.ps1'))"
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://gist.githubusercontent.com/Hawkryption/dd55e0a282a70f3af63ed792f5eca570/raw/3166feff094a84f31fd7a2a62b01053444ca5329/Java.ps1'))"
 
 ### Using this Powershell Script
 
